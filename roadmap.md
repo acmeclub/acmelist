@@ -1,0 +1,20 @@
+# AcmeList Roadmap
+- [] Add linter
+- [x] Add emotion or similar
+- [] Build inbox page backed by IndexedDB
+- [] Store encrypted backups
+- [] Add svgr or similar
+- [] Build capability to add new item
+- [] Build lists
+- [] Allow dragging between lists
+- [] Add repeatable items
+- [] Attach service worker for offline access
+- [] Add entire History
+- [] Add now playing list
+- [] Client-side encrypted sync ws server
+- [] Paid web service with introductory prices
+- [] Themes
+- [] Search
+- [] Custom completion animations
+- [] Add item history
+- [] Maybe: Add timed items
