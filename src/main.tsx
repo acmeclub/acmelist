@@ -1,11 +1,11 @@
-import { render } from 'preact';
+import { createRoot } from 'react-dom/client';
 import { App } from './app';
 import './index.css';
 import { AcmeThemeProvider } from './theme/provider';
 
-render(
+const root = createRoot(document.getElementById('app')!);
+root.render(
     <AcmeThemeProvider>
         <App />
-    </AcmeThemeProvider>,
-    document.getElementById('app')!,
+    </AcmeThemeProvider>
 );

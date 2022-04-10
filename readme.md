@@ -1,3 +1,3 @@
 # AcmeList
 
-A productivity & lifestyle app.
+A productivity & lifestyle app for individuals.
