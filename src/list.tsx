@@ -1,29 +1,22 @@
-import { useState, FunctionComponent } from 'react';
+import { useReducer, FunctionComponent } from 'react';
+import { defaultState, reducer } from './state';
 import { Item } from './item/item';
 
-const items: AcmeItem[] = [
-  {
-    id: 1,
-    text: 'Hey Dan, are you able to create a password for the user xyz@xyz.com please?Hey Dan, are you able to create a password for the user xyz@xyz.com please?Hey Dan, are you able to create a password for the user xyz@xyz.com please?Hey Dan, are you able to create a password for the user xyz@xyz.com please?Hey Dan, are you able to create a password for the user xyz@xyz.com please?Hey Dan, are you able to create a password for the user xyz@xyz.com please?',
-  },
-  {
-    id: 2,
-    text: 'Read Anti-Fragile',
-  },
-  {
-    id: 3,
-    text: 'Morning swim',
-  }
-];
+const initialState = {count: 0};
 
 export const ListView: FunctionComponent = () => {
-  const [state, updateState] = useState(items);
+  const [state, dispatch] = useReducer(reducer, defaultState);
+  const currentList = state.get('inbox');
+  if (!currentList) return <div />;
   return (
     <div>
         <h2>Inbox</h2>
         <div>
-            {state.map((item) =>
-                <Item key={item.id} item={item} />)}
+            {currentList.items.map((item) =>
+                <Item
+                  key={item.id}
+                  item={item}
+                />)}
         </div>
     </div>
   )

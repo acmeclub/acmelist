@@ -1,6 +1,6 @@
 # AcmeList Roadmap
-- [] Add linter
 - [x] Add emotion or similar
+- [] Add linter
 - [] Build inbox page backed by IndexedDB
 - [] Store encrypted backups
 - [] Add svgr or similar
