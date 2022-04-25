@@ -1,7 +1,7 @@
 import { useState, ElementType } from 'react';
 import { CreateButton } from './create-button';
 import { ListView } from './list';
-import { ItemView } from './item-view';
+import { ItemView } from './item-view/view';
 
 export const enum ViewComponentName {
   ListView = 'ListView',

@@ -1,5 +1,5 @@
 import { useState, FunctionComponent } from 'react';
-import { Item } from './item';
+import { Item } from './item/item';
 
 const items: AcmeItem[] = [
   {
@@ -16,7 +16,7 @@ const items: AcmeItem[] = [
   }
 ];
 
-export const ListView: React.FunctionComponent = () => {
+export const ListView: FunctionComponent = () => {
   const [state, updateState] = useState(items);
   return (
     <div>
