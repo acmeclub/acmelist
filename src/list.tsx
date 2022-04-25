@@ -11,7 +11,7 @@ const items: AcmeItem[] = [
     text: 'Read Anti-Fragile',
   },
   {
-    id: 2,
+    id: 3,
     text: 'Morning swim',
   }
 ];

@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 const theme = {
   colours: {
     outlines: 'hsl(0, 0%, 70%)',
+    purpleRain: 'hsl(238, 59%, 52%)',
   }
 }
 
