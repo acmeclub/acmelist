@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { FunctionalComponent } from 'preact';
+import { FunctionComponent } from 'react';
 
 const theme = {
   colours: {
@@ -11,7 +11,7 @@ interface Props {
   children: JSX.Element | JSX.Element[];
 }
 
-export const AcmeThemeProvider: FunctionalComponent<Props> = ({ children }) => (
+export const AcmeThemeProvider: FunctionComponent<Props> = ({ children }) => (
     <ThemeProvider theme={theme}>
         {children}
     </ThemeProvider>

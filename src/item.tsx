@@ -8,14 +8,13 @@ function Check() {
       border: 1px solid ${theme.colours.outlines};
       border-radius: 2px;
       background: none;
-      width: 1.25em;
-      height: 1.25em;
+      width: 1.5em;
+      height: 1.5em;
       flex-shrink: 0;
       top: 3px;
       position: relative;
       margin-right: 0.5em;
     `}>
-      
     </button>
   );
 }

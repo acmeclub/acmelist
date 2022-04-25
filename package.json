@@ -1,6 +1,6 @@
 {
   "name": "acme-list",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -10,7 +10,7 @@
   "dependencies": {
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.0",
-    "@vitejs/plugin-react": "^1.3.0",
+    "@vitejs/plugin-react": "^1.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
