@@ -1,16 +1,16 @@
 import { createRoot } from 'react-dom/client';
 import { App } from './app';
+import { Provider } from 'react-redux';
 import './index.css';
 import { AcmeThemeProvider } from './theme/provider';
-import { listContext, defaultState } from './state';
+import { store } from './store/store';
 
-const ListContextProvider = listContext.Provider;
 
 const root = createRoot(document.getElementById('app')!);
 root.render(
-    <ListContextProvider value={defaultState}>
+    <Provider value={store}>
         <AcmeThemeProvider>
                 <App />
         </AcmeThemeProvider>
-    </ListContextProvider>
+    </Provider>
 );
