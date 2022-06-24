@@ -1,12 +1,12 @@
 import { useReducer, FunctionComponent } from 'react';
-import { defaultState, reducer } from './state';
+// import { defaultState, reducer } from './state';
 import { Item } from './item/item';
 
 const initialState = {count: 0};
 
 export const ListView: FunctionComponent = () => {
-  const [state, dispatch] = useReducer(reducer, defaultState);
-  const currentList = state.get('inbox');
+  // const [state, dispatch] = useReducer(reducer, defaultState);
+  const currentList = { items: [] };
   if (!currentList) return <div />;
   return (
     <div>

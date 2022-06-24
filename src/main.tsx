@@ -1,16 +1,16 @@
 import { createRoot } from 'react-dom/client';
-import { App } from './app';
+// import { App } from './app';
 import { Provider } from 'react-redux';
 import './index.css';
 import { AcmeThemeProvider } from './theme/provider';
 import { store } from './store/store';
 
-
+console.log('store', store)
 const root = createRoot(document.getElementById('app')!);
 root.render(
-    <Provider value={store}>
+    // <Provider value={store}>
         <AcmeThemeProvider>
-                <App />
+                {/* <App /> */}
         </AcmeThemeProvider>
-    </Provider>
+    // </Provider>
 );
