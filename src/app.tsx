@@ -4,6 +4,7 @@ import { ListView } from './list';
 import { ItemView } from './item-view/view';
 
 export const enum ViewComponentName {
+  Home = 'Home',
   ListView = 'ListView',
   ItemView = 'ItemView',
 };

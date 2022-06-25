@@ -30,7 +30,7 @@ const initialState: ItemsState = {
   }
 }
 
-export const itemSlice = createSlice({
+export const itemsSlice = createSlice({
     name: 'items',
     initialState,
     reducers: {
@@ -40,5 +40,5 @@ export const itemSlice = createSlice({
     }
   })
   
-  export const { add } = itemSlice.actions
+  export const { add } = itemsSlice.actions
   
