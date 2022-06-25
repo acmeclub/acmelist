@@ -21,7 +21,7 @@ import {
 // https://adamreeve.co.nz/blog/todo-crdt.html
 // OR treat ordered collection as object to sync (cons: writes over other users, )
 
-interface ItemsState {
+export interface ItemsState {
   map: Record<string, AcmeItem>;
   orderedLists: Record<string, string[]>;
 };

@@ -1,7 +1,7 @@
 import { useReducer, FunctionComponent } from 'react';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { add, selectItemsByListId } from './store/items-slice';
-import { Item } from './item/item';
+import { Item } from './items/item';
 
 const initialState = {count: 0};
 

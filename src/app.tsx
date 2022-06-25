@@ -1,10 +1,11 @@
 import { useState, ElementType } from 'react';
 import { CreateButton } from './create-button';
 import { ListView } from './list';
-import { ItemView } from './item-view/view';
+import { ItemView } from './items/view';
+import { ListNavView } from './list-nav/view';
 
 export const enum ViewComponentName {
-  Home = 'Home',
+  ListNavView = 'ListNavView',
   ListView = 'ListView',
   ItemView = 'ItemView',
 };
@@ -14,6 +15,7 @@ interface View {
 }
 
 const viewMap = new Map<ViewComponentName, ElementType>([
+  [ViewComponentName.ListNavView, ListNavView],
   [ViewComponentName.ListView, ListView],
   [ViewComponentName.ItemView, ItemView],
 ]);
@@ -32,6 +34,7 @@ export function App() {
   };
   return (
     <>
+      <ListNavView />
       <RenderedView />
       <CreateButton
         onClick={() => {

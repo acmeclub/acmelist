@@ -21,13 +21,15 @@ function Check() {
 
 export function Item({ item }: { item: AcmeItem }) {
   return (
-    <div className={css`
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    `}>
-      <Check />
+    <div>
       <p className={css`margin: 0;`}>{item.text}</p>
+      <div className={css`
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      `}>
+        <Check />
+      </div>
     </div>
   );
 }
