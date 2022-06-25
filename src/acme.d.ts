@@ -1,5 +1,5 @@
 interface AcmeItem {
-  id: number,
+  id: string,
   text: string,
 }
 
