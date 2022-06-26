@@ -10,7 +10,10 @@
 - [] Allow dragging between lists
 - [] Add now playing list
 - [] CRDT prototype for all operations
+- [] Implement CRDTs
 - [] Client-side encrypted sync ws server
+- [] Add search
+- [] Add board prototype
 - [] Add Eslint
 - [] Save encrypted backups
 - [] Attach service worker for offline access
