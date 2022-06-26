@@ -1,4 +1,5 @@
 import { ElementType } from 'react';
+import { css } from '@emotion/css';
 import { CreateButton } from './create-button';
 import { ListView } from './list';
 import { ItemView } from './items/view';
@@ -18,12 +19,12 @@ export function App() {
     return () => false;
   });
   return (
-    <>
+    <div className={css``}>
       <ListNavView />
       <div>
         {views.map((View) => <View />)}
       </div>
       {/* <CreateButton /> */}
-    </>
+    </div>
   )
 }

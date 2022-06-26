@@ -5,10 +5,11 @@ import './index.css';
 import { AcmeThemeProvider } from './theme/provider';
 import { store } from './store/store';
 import { load, ItemsState } from './store/items-slice';
+import { load as loadLists, ListsState } from './store/lists-slice';
 
 const root = createRoot(document.getElementById('app')!);
 
-const dummyData: ItemsState = {
+const dummyItems: ItemsState = {
     map: {
         ['1']: {
             id: '1',
@@ -22,12 +23,34 @@ const dummyData: ItemsState = {
             id: '3',
             text: 'Morning swim',
         },
+        ['4']: {
+            id: '4',
+            text: 'Bad Lieutenant original',
+        },
+        ['5']: {
+            id: '3',
+            text: 'Giri Haji',
+        },
     },
     orderedLists: {
-        inbox: ['1', '2'],
-        b: [],
+        inbox: ['1', '2', '3'],
+        watch: ['4', '5'],
     },
 };
+
+const dummyLists: ListsState = {
+    map: {
+        inbox: {
+            id: 'inbox',
+            name: 'Inbox',
+        },
+        watch: {
+            id: 'watch',
+            name: 'Watch',
+        },
+    },
+    order: ['inbox', 'watch']
+}
 
 // Performance testing
 // for (let i = 4; i < 100000; i++) {
@@ -39,7 +62,8 @@ const dummyData: ItemsState = {
 // }
 
 // Load data
-store.dispatch(load(dummyData));
+store.dispatch(load(dummyItems));
+store.dispatch(loadLists(dummyLists));
 
 root.render(
     <Provider store={store}>
