@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {
-    itemsSlice, add,
-} from './items-slice';
+import { itemsSlice } from './items-slice';
+import { viewportSlice } from './viewport-slice';
 
 // See Usage with Typescript https://redux.js.org/usage/usage-with-typescript#standard-redux-toolkit-project-setup-with-typescript
 export const store = configureStore({
     reducer: {
         items: itemsSlice.reducer,
+        viewport: viewportSlice.reducer,
     },
 });
 

@@ -50,9 +50,17 @@ export const itemsSlice = createSlice({
 export const { add, load } = itemsSlice.actions;
 
 const selectItems = (state: ItemsState) => state.map;
-const selectItemsFromList = (state: ItemsState, listId: string) => state.orderedLists[listId];
+const selectItemsFromList = (state: ItemsState, listId: string) => {
+  if (!state.orderedLists[listId]) {
+    console.warn(`list '${listId}' not found`);
+    return [];
+  }
+  return state.orderedLists[listId];
+};
 export const selectItemsByListId = createSelector(
   [selectItems, selectItemsFromList],
-  (items, list) => list.map((itemId) => items[itemId]),
+  (items, list) => {
+    return list.map((itemId) => items[itemId]);
+  }
 );
 

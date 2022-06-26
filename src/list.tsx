@@ -1,13 +1,10 @@
-import { useReducer, FunctionComponent } from 'react';
-import { useAppDispatch, useAppSelector } from './store/hooks';
-import { add, selectItemsByListId } from './store/items-slice';
+import { FunctionComponent } from 'react';
+import { useAppSelector } from './store/hooks';
+import { selectItemsByListId } from './store/items-slice';
 import { Item } from './items/item';
 
-const initialState = {count: 0};
-
-export const ListView: FunctionComponent = () => {
-  const items = useAppSelector((state) => selectItemsByListId(state.items, 'inbox'));
-  console.log(items);
+export const ListView: FunctionComponent<{ listId: string }> = ({ listId }) => {
+  const items = useAppSelector((state) => selectItemsByListId(state.items, listId));
   const currentList = { items: [] };
   if (!currentList) return <div />;
   return (
