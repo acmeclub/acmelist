@@ -3,11 +3,6 @@ import {
   createSelector,
 } from '@reduxjs/toolkit';
 
-interface AcmeList {
-  id: string;
-  name: string;
-}
-
 export interface ListsState {
   map: Record<string, AcmeList>;
   order: string[];
@@ -34,3 +29,5 @@ export const { load } = listsSlice.actions;
 export const selectLists = (state: ListsState) =>
   state.order.map((listId) => state.map[listId]);
 
+export const selectListById = (state: ListsState, listId: string) =>
+  state.map[listId];

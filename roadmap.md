@@ -1,17 +1,22 @@
 # AcmeList Roadmap
 - [x] Add emotion or similar
-- [] Add linter
-- [] Build inbox page backed by IndexedDB
-- [] Store encrypted backups
-- [] Add svgr or similar
+- [x] Add svgr or similar
+- [x] Build lists
 - [] Build capability to add new item
-- [] Build lists
+- [] Build edit item capability
+- [] Build edit list name capability in navbar
+- [] Build edit list name capability in listview
+- [] Allow dragging up and down
 - [] Allow dragging between lists
-- [] Add repeatable items
-- [] Attach service worker for offline access
-- [] Add entire History
 - [] Add now playing list
+- [] CRDT prototype for all operations
 - [] Client-side encrypted sync ws server
+- [] Add Eslint
+- [] Save encrypted backups
+- [] Attach service worker for offline access
+- [] Add entire history of Done items
+- [] Consider a rubbish view
+- [] Add repeatable items - Maybe
 - [] Paid web service with introductory prices
 - [] Themes
 - [] Search

@@ -1,7 +1,7 @@
 import { ElementType } from 'react';
 import { css } from '@emotion/css';
 import { CreateButton } from './create-button';
-import { ListView } from './list';
+import { ListView } from './lists/view';
 import { ItemView } from './items/view';
 import { ListNavView } from './list-nav/view';
 import { ViewComponentName } from './store/viewport-slice';
@@ -19,7 +19,10 @@ export function App() {
     return () => false;
   });
   return (
-    <div className={css``}>
+    <div className={css`
+      display: flex;
+      flex-direction: row;
+    `}>
       <ListNavView />
       <div>
         {views.map((View) => <View />)}
