@@ -1,12 +1,11 @@
 import { css } from '@emotion/css';
 import React, { FunctionComponent } from 'react';
 import { useTheme } from '@emotion/react'
-import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { ViewComponentName, replaceView } from '../store/viewport-slice';
+import { useAppSelector } from '../store/hooks';
 import { selectLists } from '../store/lists-slice';
-import InboxSVG from '../default-icons/inbox.svg';
+import { List } from './list-button';
 
-const buttonCSS = `
+export const buttonCSS = `
     display: flex;
     align-items: center;
     font-size: inherit;
@@ -20,25 +19,6 @@ const buttonCSS = `
     &:hover {
         background: #BDD4FF;
     }`;
-
-const List: FunctionComponent<{ list: AcmeList }> = ({ list }) => {
-    const dispatch = useAppDispatch();
-    return (
-        <button
-            className={css(buttonCSS)}
-            onClick={() => dispatch(replaceView({
-                viewIndex: 0,
-                viewState: {
-                type: ViewComponentName.ListView,
-                listId: list.id,
-                },
-            }))}
-        >
-            <span className={css`color: #858585; padding-right: 0.5em;`}><InboxSVG /></span>
-            <span>{list.name}</span>
-        </button>
-    );
-};
 
 export const ListNavView: FunctionComponent = () => {
     const lists = useAppSelector((state) => selectLists(state.lists));
