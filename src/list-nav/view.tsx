@@ -6,6 +6,7 @@ import { selectLists } from '../store/lists-slice';
 import { List } from './list-button';
 
 export const buttonCSS = `
+    position: relative;
     display: flex;
     align-items: center;
     font-size: inherit;
@@ -14,7 +15,7 @@ export const buttonCSS = `
     background: none;
     border: 0;
     border-radius: 3px;
-    padding: 0.5em;
+    padding: 0.5em 0;
     cursor: pointer;
     &:hover {
         background: #BDD4FF;
